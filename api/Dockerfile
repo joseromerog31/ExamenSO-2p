@@ -10,7 +10,7 @@ RUN go mod download
 COPY . ./
 RUN go build -o main .
 
-# Etapa 2: Imagen
+# Imagen
 FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
